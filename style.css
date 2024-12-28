@@ -9,15 +9,40 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 #grid {
     align-self: center;
     aspect-ratio: 1 / 1;
-    border: 2px solid #740938;
-    background-color: #DFF2EB;
+    border: 2px solid #C30E59;
+    background-color: #DFF2FF;
     display: flex;
     flex-direction: column;
+}
+
+#reset {
+    position: absolute;
+    padding: 8px 24px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #E82561;
+    color: white;
+    border-radius: 12px;
+    border: none;
+}
+
+#reset:hover {
+    background-color: #C30E59;
+    box-shadow:
+        0 2px 4px 0 rgba(0, 0, 0, 0.2),
+        0 4px 12px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+}
+
+#reset:active {
+    background-color: white;
+    transition: 0.1s;
 }
 
 .row {
@@ -31,7 +56,7 @@
 }
 
 .highlight {
-    background-color: plum;
+    background-color: #133E87;
 }
 
 /* Styles for when width is greater than height */
@@ -40,6 +65,11 @@
         height: 50vw;
         max-height: 90vh;
     }
+
+    #reset {
+        top: 24px;
+        right: 48px;
+    }
 }
 
 /* Styles for when height is greater than width */
@@ -47,5 +77,10 @@
     #grid {
         width: 50vh;
         max-width: 90vw;
+    }
+
+    #reset {
+        top: 24px;
+        right: 5vw;
     }
 }
