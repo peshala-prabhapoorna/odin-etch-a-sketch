@@ -25,8 +25,13 @@
 }
 
 .cell {
-    flex: 1;
+    flex: 1 1 auto;
     aspect-ratio: 1 / 1;
+    border: 1px solid white;
+}
+
+.highlight {
+    background-color: plum;
 }
 
 /* Styles for when width is greater than height */

@@ -9,9 +9,13 @@ for (let i = 0; i < DEFAULT_GRID_SIZE; i++) {
     for (let j = 0; j < DEFAULT_GRID_SIZE; j++) {
         const cell = document.createElement('div');
         cell.classList.add('cell');
-        cell.setAttribute('style', `border: 1px solid plum;`);
         row.appendChild(cell);
     }
 
     grid.appendChild(row)
 }
+
+grid.addEventListener('mouseover', (event) => {
+    const targetCell = event.target;
+    targetCell.classList.add('highlight');
+});
