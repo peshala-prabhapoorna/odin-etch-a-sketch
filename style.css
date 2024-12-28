@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#viewport {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#grid {
+    align-self: center;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #740938;
+    background-color: #DFF2EB;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+/* Styles for when width is greater than height */
+@media (min-aspect-ratio: 1/1) {
+    #grid {
+        height: 50vw;
+        max-height: 90vh;
+    }
+}
+
+/* Styles for when height is greater than width */
+@media (max-aspect-ratio: 1/1) {
+    #grid {
+        width: 50vh;
+        max-width: 90vw;
+    }
+}
